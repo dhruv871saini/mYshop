@@ -1,0 +1,120 @@
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.animated-section {
+  opacity:0;
+  transform: translateY(50px);
+  transition: none; 
+}
+
+
+.in-view.animated-section {
+  animation: fadeIn 2s ease-out, slideUp 2s ease-out;
+  opacity: 1;
+  transform: translateY(0);
+  overflow: visible; 
+  
+}
+/* home.css */
+
+.sticky-container {
+  position: relative; /* Create a relative positioning context */
+}
+
+.sticky-top-nav {
+  position: sticky;
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure it's above other content */
+  background-color: #fff; /* Background color to ensure it’s visible */
+  border-bottom: 1px solid #ddd; /* Optional: border to separate it from other content */
+}
+
+.sticky-top-category {
+  position: sticky;
+  top: 60px; /* Adjust based on the height of the navigation bar */
+  z-index: 999; /* Ensure it's below the navigation bar */
+   /* Background color for the category button */
+   /* Optional: border to separate it from other content */
+}
+.bg-dark .sticky-top-category{
+  /* background-color: black; */
+}
+.bg-dark .sticky-top-nav{
+  background-color: black;
+}
+.overflow{
+  /* overflow: hidden; */
+}.bg-clr{
+  background-color: rgb(135, 217, 250);
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+.bg-dark .bg-clr{
+  
+  background-color: rgb(50, 68, 82);
+  /* background-color: rgb(187, 135, 250); */
+}
+.bg-light .textclr{
+color: black;
+}
+.bg-dark .textclr{
+  color: rgb(0, 0, 0);
+}
+/* Ensure the image scales up on hover */
+.card-container {
+  position: relative; /* Ensure the image scaling is relative to this container */
+  overflow: hidden; /* Hide overflow to avoid showing parts of the image outside the container */
+}
+
+.card-container .card-image {
+  transition: transform 0.3s ease; /* Smooth transition for scaling effect */
+}
+
+.card-container:hover .card-image {
+  transform: scale(1.1); /* Scale up the image on hover */
+}
+/* Hide buttons initially */
+.card-actions {
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Smooth transition for the appearance of buttons */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.8); /* Optional: Add background to make buttons more visible */
+}
+
+/* Show buttons on hover */
+.card-container:hover .card-actions {
+  opacity: 1;
+}
+/* Default card background color */
+.card {
+  background-color: white; /* Default light mode background color */
+  color: black; /* Default text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Dark mode card styling */
+.bg-dark .card {
+  background-color: black; /* Dark mode background color */
+  color: white; /* Dark mode text color */
+}

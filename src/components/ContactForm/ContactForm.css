@@ -1,0 +1,34 @@
+/* ContactForm.css */
+
+/* Customize the button color and form spacing */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .form-control {
+    border-radius: 0.25rem;
+  }
+  
+  @media (max-width: 768px) {
+    .form-control {
+      font-size: 0.875rem;
+    }
+  
+    .btn-primary {
+      font-size: 0.875rem;
+    }
+  }
+  .width_100_img{
+    margin-top: 10%;
+    width: 100%;
+  }
+  .bg-dark .text-primarys{
+    color: aqua;
+  }.icon-logo{
+    width: 50px;
+  }

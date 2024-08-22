@@ -1,0 +1,63 @@
+
+.w-100 {
+    height: 70vh;
+    overflow: hidden; /* Hide any overflow to ensure a clean look */
+  }
+  
+  /* Ensure each 'one' div takes full height of the container */
+  .w-100 .one {
+    position: relative;
+    height: 100%; /* Full height of the container */
+    overflow: hidden; /* Hide overflow to keep images contained */
+  }
+  
+  /* Ensure the images fit properly within the div */
+  .w-100 .one img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+    display: block; /* Remove any space below the image */
+  }
+  
+  /* Style for the details container to overlay the image */
+  .w-100 .one .details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white; /* White text for better contrast */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Optional dark overlay for readability */
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover effect for the details section */
+  .w-100 .one:hover .details {
+    background: rgba(36, 32, 32, 0.7); /* Darker background on hover */
+  }
+  
+  /* Style for the button */
+  .w-100 .one .details button {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background: none;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    margin-top: 10px; /* Space between text and button */
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  .w-100 .one .details button:hover {
+    background: #fff;
+    color: #2a2a2a;
+    font-weight: 600;
+  }
+  
